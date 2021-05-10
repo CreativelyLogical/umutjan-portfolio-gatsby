@@ -3,12 +3,13 @@ import styled from "@emotion/styled"
 import React, { useEffect, useState } from "react"
 import transitionIn from "../animations/transition_in"
 import Container from "../layout/container"
+import sizes from "../layout/sizes"
 
 const GetInTouch = styled.h1(() => {
   return {
     fontFamily: "sans-serif",
     color: "aliceblue",
-    fontSize: "3.5rem",
+    fontSize: "calc(1vw + 2vh + 2vmin)",
     fontWeight: 700,
     textAlign: "left",
     margin: "3rem 0",
@@ -20,10 +21,11 @@ const GetInTouchDetails = styled.div(() => {
   return {
     fontFamily: "Raleway",
     color: "white",
-    fontSize: "1.4rem",
+
     lineHeight: 2,
     p: {
       marginBottom: "2.5rem",
+      fontSize: "calc(0vw + 1vh + 1vmin)",
     },
   }
 })
@@ -35,7 +37,7 @@ const SendEmailButton = styled.button(() => {
     borderRadius: 15,
     background: "transparent",
     padding: "0.5rem 3rem",
-    fontSize: "1.5rem",
+    fontSize: "calc(0vw + 1vh + 1vmin)",
     fontWeight: 400,
     transition: "0.2s",
     cursor: "pointer",
@@ -49,6 +51,9 @@ const SendEmailButton = styled.button(() => {
 const ContactMe = ({ innerRef, visible }) => {
   const [animationStyle, setAnimationStyle] = useState(css`
     opacity: 0;
+    @media (max-width: ${sizes.mobile}) {
+      padding: 0 1.5rem;
+    }
   `)
 
   useEffect(() => {
@@ -56,6 +61,9 @@ const ContactMe = ({ innerRef, visible }) => {
       setAnimationStyle(css`
         opacity: 0;
         animation: ${transitionIn} 2s ease 100ms forwards;
+        @media (max-width: ${sizes.mobile}) {
+          padding: 0 1.5rem;
+        }
       `)
     }
   }, [visible])

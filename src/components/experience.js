@@ -8,12 +8,14 @@ import sizes from "../layout/sizes"
 const leanpub = {
   title: "Full Stack Developer Co-op",
   details: {
-    companyName: "Leanpub",
+    companyName: "Ruboss",
     duration: "Jan 2021 - Present",
     type: "Internship",
   },
-  description:
-    "Working mainly on the styling Leanpub storefront pages and incorporating GraphQL into the API",
+  description: `Working mainly on the styling Leanpub storefront pages and incorporating GraphQL into the API. 
+  Overhauled image sizes used by Leanpub which lead to a 30% reduction in data loaded by the storefront page. Took
+  on mentorship role for other coop students in the full stack team.
+    `,
   techUsed: [
     "React",
     "Next.js",
@@ -23,7 +25,7 @@ const leanpub = {
     "GraphQL",
     "Yarn",
   ],
-  companyWebsite: "https://leanpub.com/",
+  companyWebsite: "http://ruboss.com/",
 }
 
 const okhelp = {

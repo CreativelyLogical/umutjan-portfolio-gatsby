@@ -47,9 +47,15 @@ const AboutMeDetails = styled.div`
   align-items: start;
 
   .leanpub {
-    color: rgb(240, 248, 255);
+    color: #69ebff;
     font-weight: 600;
     text-decoration: none;
+  }
+
+  .ruboss {
+    text-decoration: none;
+    font-weight: 600;
+    color: #69ebff;
   }
 
   .interest {
@@ -255,11 +261,17 @@ export const About = ({ innerRef, visible }) => {
               <br />
               <br />
               Currently, I am a Full Stack Developer intern at{" "}
+              <a className="ruboss" href="http://ruboss.com/">
+                Ruboss
+              </a>
+              , which owns and operates{" "}
               <a className="leanpub" href="https://leanpub.com/">
                 Leanpub
               </a>
-              , where I get to solve a variety of interesting problems on a
-              daily basis.
+              , a online platform where authors can write and publish e-books
+              and courses. As a full stack coop, I get to solve a variety of
+              interesting problems on a daily basis which constantly challenges
+              me to improve my skills as a developer.
               <br />
               <br />
               Some technologies that I've recently been working with are:

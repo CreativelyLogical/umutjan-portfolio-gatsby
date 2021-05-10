@@ -31,7 +31,7 @@ const StyledHero = styled.div`
 
   .name {
     color: aliceblue;
-    font-size: calc(2vw + 2vh + 2vmin);
+    font-size: calc(1vw + 2vh + 2vmin);
     animation-fill-mode: both;
     opacity: 0;
     animation: ${transitionIn} 3s ease 2s forwards;
@@ -42,7 +42,7 @@ const StyledHero = styled.div`
 
   .occp {
     ${"" /* color: rgba(236, 236, 236, 0.562); */}
-    font-size: calc(2vw + 2vh + 2vmin);
+    font-size: calc(1vw + 2vh + 2vmin);
     opacity: 0;
     animation: ${transitionIn} 2s ease 3.5s forwards;
     @media (max-width: ${sizes.mobile}) {
