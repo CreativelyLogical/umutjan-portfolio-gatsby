@@ -7,6 +7,7 @@ import Battlesnake from "../images/battlesnake.png"
 import transitionIn from "../animations/transition_in"
 
 import Raleway from "../fonts/Raleway-VariableFont_wght.ttf"
+import sizes from "../layout/sizes"
 
 const hopeTodoProject = {
   id: 1,
@@ -53,6 +54,9 @@ const battlesnakeProject = {
 export const Projects = ({ innerRef, visible }) => {
   const [animationStyle, setAnimationStyle] = useState(css`
     opacity: 0;
+    @media (max-width: ${sizes.mobile}) {
+      padding: 0 1.5rem;
+    }
   `)
 
   useEffect(() => {
@@ -60,6 +64,9 @@ export const Projects = ({ innerRef, visible }) => {
       setAnimationStyle(css`
         opacity: 0;
         animation: ${transitionIn} 2s ease 100ms forwards;
+        @media (max-width: ${sizes.mobile}) {
+          padding: 0 1.5rem;
+        }
       `)
     }
   }, [visible])
@@ -75,10 +82,10 @@ export const Projects = ({ innerRef, visible }) => {
       <h1
         css={css`
           color: aliceblue;
-          font-size: 3.5rem;
+          font-size: calc(1vw + 2vh + 2vmin);
           font-weight: 700;
           text-align: left;
-          margin-bottom: 3.5%;
+          margin: 0 auto 2rem;
           margin-top: 2rem;
         `}
       >

@@ -40,6 +40,9 @@ const ProjectTitleDescription = styled.div({
   display: "flex",
   flexDirection: "column",
   marginLeft: "1.6rem",
+  "@media (max-width: 640px)": {
+    marginLeft: 0,
+  },
 })
 
 const ProjectTitle = styled.h1({
@@ -86,6 +89,7 @@ const ProjectTech = props => {
       css={css`
         border: 2px solid #3ecaed;
         margin-right: 1rem;
+        margin-bottom: 1rem;
         padding: 0.15rem 0.3rem;
         border-radius: 10px;
         color: aliceblue;

@@ -50,6 +50,9 @@ const okhelp = {
 export const Experience = ({ innerRef, visible }) => {
   const [animationStyle, setAnimationStyle] = useState(css`
     opacity: 0;
+    @media (max-width: ${sizes.mobile}) {
+      padding: 0 1.5rem;
+    }
   `)
 
   useEffect(() => {
@@ -57,6 +60,9 @@ export const Experience = ({ innerRef, visible }) => {
       setAnimationStyle(css`
         opacity: 0;
         animation: ${transitionIn} 2s ease 100ms forwards;
+        @media (max-width: ${sizes.mobile}) {
+          padding: 0 1.5rem;
+        }
       `)
     }
   }, [visible])
@@ -72,14 +78,11 @@ export const Experience = ({ innerRef, visible }) => {
       <h1
         css={css`
           color: aliceblue;
-          font-size: 3.5rem;
+          font-size: calc(1vw + 2vh + 2vmin);
           font-weight: 700;
           text-align: left;
-          margin-bottom: 3.5%;
+          margin: 0 auto 2rem;
           margin-top: 2rem;
-          @media (max-width: ${sizes.mobile}) {
-            font-size: 1.75rem;
-          }
         `}
       >
         Industry Experience

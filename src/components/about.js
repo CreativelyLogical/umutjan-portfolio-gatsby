@@ -31,14 +31,9 @@ const StyledAbout = styled.div`
 const AboutMe = styled.h1`
   font-family: "Yusei Magic", sans-serif;
   color: aliceblue;
-  font-size: 3.5rem;
+  font-size: calc(1vw + 2vh + 2vmin);
   text-align: left;
-  margin-bottom: 3.5%;
   margin: 0 auto 2rem;
-
-  @media (max-width: ${sizes.small}) {
-    font-size: 1.75rem;
-  }
 `
 
 const AboutMeDetails = styled.div`

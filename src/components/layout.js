@@ -26,7 +26,7 @@ const StyledLayout = styled.div`
   padding: 0 6rem;
 
   @media (max-width: ${sizes.small}) {
-    padding: 3rem;
+    padding: 1.5rem;
   }
   @media (max-width: ${sizes.mobile}) {
     padding: 0;

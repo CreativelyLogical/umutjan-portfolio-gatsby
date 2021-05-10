@@ -17,7 +17,7 @@ const JobContainer = styled.div({
 })
 
 const JobTitle = styled.h3({
-  fontSize: "calc(4vw + 4vh + 2vmin)",
+  fontSize: "calc(0vw + 2vh + 2vmin)",
   color: "aliceblue",
   marginBottom: "0.2rem",
   fontWeight: 500,

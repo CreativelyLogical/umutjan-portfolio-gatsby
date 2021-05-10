@@ -31,22 +31,22 @@ const StyledHero = styled.div`
 
   .name {
     color: aliceblue;
-    font-size: 4rem;
+    font-size: calc(2vw + 2vh + 2vmin);
     animation-fill-mode: both;
     opacity: 0;
     animation: ${transitionIn} 3s ease 2s forwards;
-    @media (max-width: 640px) {
-      font-size: 2rem;
+    @media (max-width: ${sizes.mobile}) {
+      font-size: calc(1vw + 2vh + 2vmin);
     }
   }
 
   .occp {
     ${"" /* color: rgba(236, 236, 236, 0.562); */}
-    font-size: 4rem;
+    font-size: calc(2vw + 2vh + 2vmin);
     opacity: 0;
     animation: ${transitionIn} 2s ease 3.5s forwards;
-    @media (max-width: ${sizes.small}) {
-      font-size: 2rem;
+    @media (max-width: ${sizes.mobile}) {
+      font-size: calc(1vw + 2vh + 2vmin);
     }
   }
 
