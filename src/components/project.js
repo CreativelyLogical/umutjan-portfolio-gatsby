@@ -31,7 +31,8 @@ const ProjectContainer = styled.div({
 const ProjectInnerContainer = styled.div({
   display: "flex",
   flexDirection: "row",
-  "@media (max-width: 640px)": {
+  width: "100%",
+  "@media (max-width: 768px)": {
     flexDirection: "column",
   },
 })
@@ -112,9 +113,9 @@ export const Project = props => (
         src={props.logo}
         css={css({
           marginBottom: 0,
-          width: "calc(6vw + 8vh + 2vmin)",
-          height: "calc(6vw + 8vh + 2vmin)",
-          "@media (max-width: 640px)": {
+          width: "calc(4vw + 5vh + 2vmin)",
+          height: "calc(4vw + 5vh + 2vmin)",
+          "@media (max-width: 768px)": {
             margin: "0 auto",
             marginBottom: "1rem",
           },

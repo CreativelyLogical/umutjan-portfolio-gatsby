@@ -43,17 +43,20 @@ const JobDetails = styled.div({
 })
 
 const Duration = styled.h2({
-  fontSize: "1.1rem",
+  fontSize: "calc(0vw + 2vh + 0vmin)",
   fontWeight: 400,
   color: "rgba(255, 247, 214, 0.9)",
 })
 
 const CompanyName = styled.h2({
-  fontSize: "1.8rem",
+  fontSize: "calc(0vw + 1vh + 2vmin)",
   fontWeight: 700,
   marginBottom: "0.2rem",
   fontFamily: "Raleway",
   color: "#28b6de",
+  "@media (max-width: 640px)": {
+    marginRight: 0,
+  },
 })
 
 const JobTechContainer = styled.div({
