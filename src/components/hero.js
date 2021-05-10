@@ -65,7 +65,7 @@ export const Hero = () => (
   <Container size="large" minHeight="100vh" id="hero">
     <StyledHero>
       <p className="intro">Hi, I am</p>
-      <h1 className="name">Umutjan Mahemuti</h1>
+      <h1 className="name">Umutjan Mahmut</h1>
       <h1 className="occp">I'm a software developer</h1>
       <p className="details">
         I'm a 4th year Computer Science student in University of Victoria
