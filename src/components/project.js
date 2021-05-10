@@ -112,12 +112,11 @@ export const Project = props => (
         src={props.logo}
         css={css({
           marginBottom: 0,
-          width: 200,
-          height: 200,
+          width: "calc(6vw + 8vh + 2vmin)",
+          height: "calc(6vw + 8vh + 2vmin)",
           "@media (max-width: 640px)": {
-            width: 100,
-            height: 100,
-            margin: "1rem auto",
+            margin: "0 auto",
+            marginBottom: "1rem",
           },
         })}
       />

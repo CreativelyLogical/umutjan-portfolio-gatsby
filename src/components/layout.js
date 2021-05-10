@@ -23,7 +23,7 @@ import sizes from "../layout/sizes"
 
 const StyledLayout = styled.div`
   background: ${heroBackground};
-  padding: 0 6rem;
+  padding: 0 3rem;
 
   @media (max-width: ${sizes.small}) {
     padding: 1.5rem;
