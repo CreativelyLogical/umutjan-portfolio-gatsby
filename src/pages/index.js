@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,30 +7,7 @@ import { About } from "../components/about"
 import { Experience } from "../components/experience"
 import { Projects } from "../components/projects"
 import ContactMe from "../components/contact"
-
-const useOnScreen = options => {
-  const ref = useRef()
-
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setVisible(entry.isIntersecting)
-    }, options)
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
-      }
-    }
-  }, [ref, options])
-
-  return [ref, visible]
-}
+import useOnScreen from "../hooks/useOnScreen"
 
 const IndexPage = () => {
   const [aboutRef, aboutVisible] = useOnScreen({ threshold: "0.3" })
