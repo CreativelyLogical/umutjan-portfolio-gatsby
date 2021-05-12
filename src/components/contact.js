@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react"
 import transitionIn from "../animations/transition_in"
 import Container from "../layout/container"
 import sizes from "../layout/sizes"
+import SectionHeader from "./shared/section_header"
 
 const GetInTouch = styled.h1(() => {
   return {
@@ -76,7 +77,7 @@ const ContactMe = ({ innerRef, visible }) => {
       css={animationStyle}
       id="contact"
     >
-      <GetInTouch>Get In Touch</GetInTouch>
+      <SectionHeader>Get In Touch</SectionHeader>
       <GetInTouchDetails>
         <Container size="small">
           <p>

@@ -4,6 +4,7 @@ import { css } from "@emotion/react"
 import { Job } from "./job"
 import transitionIn from "../animations/transition_in"
 import sizes from "../layout/sizes"
+import SectionHeader from "./shared/section_header"
 
 const leanpub = {
   title: "Full Stack Developer Co-op",
@@ -77,18 +78,7 @@ export const Experience = ({ innerRef, visible }) => {
       css={animationStyle}
       id="experience"
     >
-      <h1
-        css={css`
-          color: aliceblue;
-          font-size: calc(1vw + 2vh + 2vmin);
-          font-weight: 700;
-          text-align: left;
-          margin: 0 auto 2rem;
-          margin-top: 2rem;
-        `}
-      >
-        Industry Experience
-      </h1>
+      <SectionHeader>Industry Experience</SectionHeader>
       <Job
         title={leanpub["title"]}
         details={leanpub["details"]}

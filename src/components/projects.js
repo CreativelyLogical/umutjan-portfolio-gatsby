@@ -8,6 +8,7 @@ import transitionIn from "../animations/transition_in"
 
 import Raleway from "../fonts/Raleway-VariableFont_wght.ttf"
 import sizes from "../layout/sizes"
+import SectionHeader from "./shared/section_header"
 
 const hopeTodoProject = {
   id: 1,
@@ -79,18 +80,7 @@ export const Projects = ({ innerRef, visible }) => {
       css={animationStyle}
       id="projects"
     >
-      <h1
-        css={css`
-          color: aliceblue;
-          font-size: calc(1vw + 2vh + 2vmin);
-          font-weight: 700;
-          text-align: left;
-          margin: 0 auto 2rem;
-          margin-top: 2rem;
-        `}
-      >
-        Projects
-      </h1>
+      <SectionHeader>Projects</SectionHeader>
       <Project
         title="Hope: To-do List & Reminders"
         description={hopeTodoProject["description"]}

@@ -14,6 +14,7 @@ import {
   SiJavascript,
   SiHtml5,
   SiGraphql,
+  SiNodeDotJs,
 } from "react-icons/si"
 import { DiRuby } from "react-icons/di"
 import shake from "../animations/shake"
@@ -21,6 +22,7 @@ import enlarge from "../animations/enlarge"
 import transitionIn from "../animations/transition_in"
 import "@fontsource/raleway/500.css"
 import sizes from "../layout/sizes"
+import SectionHeader from "./shared/section_header"
 
 const StyledAbout = styled.div`
   font-family: "Raleway";
@@ -28,20 +30,12 @@ const StyledAbout = styled.div`
   flex-direction: column;
 `
 
-const AboutMe = styled.h1`
-  font-family: "Yusei Magic", sans-serif;
-  color: aliceblue;
-  font-size: calc(1vw + 2vh + 2vmin);
-  text-align: left;
-  margin: 0 auto 2rem;
-`
-
 const AboutMeDetails = styled.div`
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   float: left;
   text-align: left;
-  margin-right: 3rem;
+  ${"" /* margin-right: 3rem; */}
   line-height: 1.6;
   color: #e6e6e6;
   align-items: start;
@@ -78,7 +72,7 @@ const TechnologiesWrapper = styled.div`
 `
 
 const IconWrapper = styled.div({
-  fontSize: "2.6rem",
+  fontSize: "2.5rem",
   marginRight: "1.6rem",
   transition: "0.2s",
 
@@ -93,108 +87,34 @@ const Tech = props => {
   let icon
   switch (props.icon) {
     case "react":
-      icon = (
-        <SiReact
-          color="#00D9FF"
-          // onMouseEnter={e => {
-          //   e.target.style.color = "#00D9FF"
-          // }}
-          // // onMouseLeave={e => {
-          // //   e.target.style.color = "#C2C2C2"
-          // // }}
-        />
-      )
+      icon = <SiReact color="#00D9FF" />
       break
     case "js":
-      icon = (
-        <SiJavascript
-          color="#F7E018"
-          // onMouseEnter={e => {
-          //   e.target.style.color = "#F7E018"
-          // }}
-          // onMouseLeave={e => {
-          //   e.target.style.color = "#C2C2C2"
-          // }}
-        />
-      )
+      icon = <SiJavascript color="#F7E018" />
       break
     case "ts":
-      icon = (
-        <SiTypescript
-          color="#007ACC"
-          // color="#007ACC"
-          // onMouseEnter={e => {
-          //   e.target.style.color = "#007ACC"
-          // }}
-        />
-      )
+      icon = <SiTypescript color="#007ACC" />
       break
     case "ruby":
-      icon = (
-        <DiRuby
-          color="#D91404"
-          // color="#D91404"
-          // onMouseEnter={e => {
-          //   e.target.style.color = "#D91404"
-          // }}
-        />
-      )
+      icon = <DiRuby color="#D91404" />
       break
     case "rails":
-      icon = (
-        <SiRails
-          color="#CB0101"
-          onMouseEnter={e => {
-            e.target.style.color = "#CB0101"
-          }}
-          // onMouseLeave={e => {
-          //   e.target.style.color = "#C2C2C2"
-          // }}
-        />
-      )
+      icon = <SiRails color="#CB0101" />
       break
     case "next":
-      icon = (
-        <SiNextDotJs
-          color="#fff"
-          // color="#fff"
-          // onMouseEnter={e => {
-          //   e.target.style.color = "#fff"
-          // }}
-        />
-      )
+      icon = <SiNextDotJs color="#fff" />
       break
     case "html":
-      icon = (
-        <SiHtml5
-          color="#DE4B25"
-          // onMouseEnter={e => {
-          //   e.target.style.color = "#DE4B25"
-          // }}
-        />
-      )
+      icon = <SiHtml5 color="#DE4B25" />
       break
     case "css":
-      icon = (
-        <SiCss3
-          color="#006DB4"
-          // color="#006DB4"
-          // onMouseEnter={e => {
-          //   e.target.style.color = "#006DB4"
-          // }}
-        />
-      )
+      icon = <SiCss3 color="#006DB4" />
       break
     case "graphql":
-      icon = (
-        <SiGraphql
-          color="#DF34A6"
-          // color="#DF34A6"
-          // onMouseEnter={e => {
-          //   e.target.style.color = "#DF34A6"
-          // }}
-        />
-      )
+      icon = <SiGraphql color="#DF34A6" />
+      break
+    case "nodejs":
+      icon = <SiNodeDotJs color="#539E43" />
       break
     default:
       break
@@ -232,7 +152,7 @@ export const About = ({ innerRef, visible }) => {
       css={animationStyle}
       id="about"
     >
-      <AboutMe>About me</AboutMe>
+      <SectionHeader>About me</SectionHeader>
       <StyledAbout>
         <Container size="small">
           <AboutMeDetails>
@@ -286,6 +206,7 @@ export const About = ({ innerRef, visible }) => {
                 <Tech icon="html" />
                 <Tech icon="css" />
                 <Tech icon="graphql" />
+                <Tech icon="nodejs" />
               </TechnologiesWrapper>
               {/* <br />
             <br />
