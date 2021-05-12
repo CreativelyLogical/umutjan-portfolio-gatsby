@@ -147,7 +147,7 @@ export const About = ({ innerRef, visible }) => {
   return (
     <Container
       size="large"
-      minHeight="60vh"
+      minHeight="70vh"
       ref={innerRef}
       css={animationStyle}
       id="about"

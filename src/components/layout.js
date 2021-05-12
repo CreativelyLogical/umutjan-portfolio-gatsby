@@ -13,6 +13,7 @@ import "./layout.css"
 import styled from "@emotion/styled"
 import { heroBackground } from "../layout/colors"
 import sizes from "../layout/sizes"
+import Navbar from "./navbar"
 
 const StyledLayout = styled.div`
   background: ${heroBackground};
@@ -27,7 +28,12 @@ const StyledLayout = styled.div`
 `
 
 const Layout = ({ children }) => {
-  return <StyledLayout>{children}</StyledLayout>
+  return (
+    <StyledLayout>
+      <Navbar />
+      {children}
+    </StyledLayout>
+  )
 }
 
 Layout.propTypes = {

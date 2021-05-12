@@ -2,18 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
-// const ProjectContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: start;
-//   padding: 1rem;
-//   border-radius: 15px;
-//   font-family: Raleway;
-//   margin-bottom: 1.6rem;
-//   max-width: 900px;
-//   width: 100%;
-//   background: aliceblue;
-// `
 const ProjectContainer = styled.div({
   display: "flex",
   flexDirection: "column",

@@ -73,7 +73,7 @@ export const Experience = ({ innerRef, visible }) => {
   return (
     <Container
       size="large"
-      minHeight="60vh"
+      minHeight="90vh"
       ref={innerRef}
       css={animationStyle}
       id="experience"
