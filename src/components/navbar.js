@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Name>Umutjan Mahmut</Name>
-      <RightNavbar open={open} />
+      <RightNavbar open={open} setOpen={setOpen} />
       <BurgerMenu open={open} setOpen={setOpen} />
     </Nav>
   )

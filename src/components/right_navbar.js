@@ -10,6 +10,7 @@ const RightNavContainer = styled.ul`
   flex-direction: row;
   z-index: 20;
   margin: 0;
+  transition: 0.3s linear;
   @media (max-width: ${sizes.small}) {
     width: 70%;
     position: fixed;
@@ -59,15 +60,16 @@ const RightNavButton = styled.li`
   }
 `
 
-const RightNavbar = ({ open }) => {
-  console.log("open is", open)
-
+const RightNavbar = ({ open, setOpen }) => {
   return (
     <>
       <RightNavContainer open={open}>
         <RightNavButton
           onClick={() => {
             scrollComponentIntoView("about")
+            if (open) {
+              setOpen(!open)
+            }
           }}
           top={1}
         >
@@ -76,6 +78,9 @@ const RightNavbar = ({ open }) => {
         <RightNavButton
           onClick={() => {
             scrollComponentIntoView("experience")
+            if (open) {
+              setOpen(!open)
+            }
           }}
           top={2}
         >
@@ -84,6 +89,9 @@ const RightNavbar = ({ open }) => {
         <RightNavButton
           onClick={() => {
             scrollComponentIntoView("projects")
+            if (open) {
+              setOpen(!open)
+            }
           }}
           top={3}
         >
@@ -92,6 +100,9 @@ const RightNavbar = ({ open }) => {
         <RightNavButton
           onClick={() => {
             scrollComponentIntoView("contact")
+            if (open) {
+              setOpen(!open)
+            }
           }}
           top={4}
         >

@@ -1,12 +1,9 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 import Container from "../layout/container"
-import { heroBackground } from "../layout/colors"
 import { css } from "@emotion/react"
-import { FaReact, FaJs, FaTty } from "react-icons/fa"
 import {
   SiTypescript,
-  SiRuby,
   SiRails,
   SiNextDotJs,
   SiCss3,
@@ -17,8 +14,6 @@ import {
   SiNodeDotJs,
 } from "react-icons/si"
 import { DiRuby } from "react-icons/di"
-import shake from "../animations/shake"
-import enlarge from "../animations/enlarge"
 import transitionIn from "../animations/transition_in"
 import "@fontsource/raleway/500.css"
 import sizes from "../layout/sizes"
@@ -138,11 +133,6 @@ export const About = ({ innerRef, visible }) => {
       `)
     }
   }, [visible])
-
-  // const scrollHandler = () => {
-  //   if (window.pageYOffset + window.innerHeight >= hiddenRef.current.offsetTop)
-  //     console.log(`Hidden element is now visible`)
-  // }
 
   return (
     <Container
