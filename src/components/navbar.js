@@ -1,5 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "@emotion/styled"
+import sizes from "../layout/sizes"
+import scrollComponentIntoView from "../utils/scroll_component_into_view"
+import RightNavbar from "./right_navbar"
+import BurgerMenu from "./burger"
 
 const Nav = styled.nav`
   font-family: Raleway;
@@ -9,20 +13,35 @@ const Nav = styled.nav`
   left: 0;
   top: 0;
   width: 100%;
-  height: 60px;
+  height: 80px;
+
+  ${"" /* filter: blur(5px); */}
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: fixed;
   background: #0f2640;
   font-weight: 500;
+  @media (max-width: ${sizes.small}) {
+    box-shadow: 0px 10px 15px 2px #081524;
+  }
 `
 
 const NavButtonsContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
+  z-index: 100;
   margin: 0;
+  @media (max-width: ${sizes.mobile}) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    height: 100vh;
+    background: #06121f;
+  }
 `
 
 const NavButton = styled.li`
@@ -62,50 +81,14 @@ const Name = styled.div`
   align-items: center;
 `
 
-const scrollComponentIntoView = componentId => {
-  const yOffset = -65
-  const element = document.getElementById(componentId)
-  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-  window.scrollTo({ top: y, behavior: "smooth" })
-}
-
 const Navbar = () => {
+  const [open, setOpen] = useState(false)
+
   return (
     <Nav>
       <Name>Umutjan Mahmut</Name>
-      <NavButtonsContainer>
-        <NavButton>
-          <a
-            onClick={() => {
-              scrollComponentIntoView("about")
-            }}
-          >
-            About
-          </a>
-        </NavButton>
-        <NavButton
-          onClick={() => {
-            scrollComponentIntoView("experience")
-          }}
-        >
-          <a>Experience</a>
-        </NavButton>
-        <NavButton
-          onClick={() => {
-            scrollComponentIntoView("projects")
-          }}
-        >
-          <a>Projects</a>
-        </NavButton>
-        <NavButton
-          onClick={() => {
-            scrollComponentIntoView("contact")
-          }}
-        >
-          <a>Contact</a>
-        </NavButton>
-      </NavButtonsContainer>
+      <RightNavbar open={open} />
+      <BurgerMenu open={open} setOpen={setOpen} />
     </Nav>
   )
 }
