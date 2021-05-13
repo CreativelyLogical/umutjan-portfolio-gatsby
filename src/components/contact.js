@@ -6,18 +6,6 @@ import Container from "../layout/container"
 import sizes from "../layout/sizes"
 import SectionHeader from "./shared/section_header"
 
-const GetInTouch = styled.h1(() => {
-  return {
-    fontFamily: "sans-serif",
-    color: "aliceblue",
-    fontSize: "calc(1vw + 2vh + 2vmin)",
-    fontWeight: 700,
-    textAlign: "left",
-    margin: "3rem 0",
-    marginTop: "3rem",
-  }
-})
-
 const GetInTouchDetails = styled.div(() => {
   return {
     fontFamily: "Raleway",

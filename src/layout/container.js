@@ -13,6 +13,7 @@ const Container = styled.div(props => {
     background: backgroundColor ? backgroundColor : "transparent",
     minHeight: minHeight,
     width: "100%",
+    zIndex: 0,
   }
 })
 

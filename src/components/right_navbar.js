@@ -8,7 +8,7 @@ const RightNavContainer = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
-  z-index: 20;
+  z-index: 50;
   margin: 0;
   transition: 0.3s linear;
   @media (max-width: ${sizes.small}) {
