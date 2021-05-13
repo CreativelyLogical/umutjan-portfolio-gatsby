@@ -15,8 +15,6 @@ const Nav = styled.nav`
   width: 100%;
   height: 80px;
 
-  ${"" /* filter: blur(5px); */}
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,57 +26,12 @@ const Nav = styled.nav`
   }
 `
 
-const NavButtonsContainer = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  z-index: 100;
-  margin: 0;
-  @media (max-width: ${sizes.mobile}) {
-    position: fixed;
-    top: 0;
-    right: 0;
-    flex-direction: column;
-    height: 100vh;
-    background: #06121f;
-  }
-`
-
-const NavButton = styled.li`
-  display: inherit;
-  padding: 0.5rem 1.5rem;
-
-  align-items: center;
-  margin: 0;
-  text-transform: uppercase;
-  position: relative;
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  :after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 3px;
-    left: 50%;
-    position: absolute;
-    background: #218eb2;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  :hover:after {
-    width: 100%;
-    left: 0;
-  }
-`
-
 const Name = styled.div`
   display: inherit;
   color: white;
   padding: 0.5rem 1.5rem;
   align-items: center;
+  text-transform: uppercase;
 `
 
 const Navbar = () => {

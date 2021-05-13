@@ -10,7 +10,7 @@ const RightNavContainer = styled.ul`
   flex-direction: row;
   z-index: 20;
   margin: 0;
-  @media (max-width: ${sizes.mobile}) {
+  @media (max-width: ${sizes.small}) {
     width: 70%;
     position: fixed;
     top: 0;
@@ -32,7 +32,7 @@ const RightNavButton = styled.li`
   text-transform: uppercase;
   position: relative;
   margin: 0;
-  @media (max-width: 768px) {
+  @media (max-width: ${sizes.small}) {
     top: 90px;
     text-align: center;
   }
