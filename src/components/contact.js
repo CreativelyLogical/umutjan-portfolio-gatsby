@@ -1,6 +1,7 @@
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 import React, { useEffect, useState } from "react"
+import { FaGithub, FaInstagram, FaLinkedin, FaLinkedinIn } from "react-icons/fa"
 import transitionIn from "../animations/transition_in"
 import Container from "../layout/container"
 import sizes from "../layout/sizes"
@@ -33,6 +34,16 @@ const SendEmailButton = styled.button(() => {
     ":hover": {
       background: "#28B6DE",
       color: "#0F2640",
+    },
+  }
+})
+
+const SocialMediaIconsContainer = styled.div(() => {
+  return {
+    marginTop: "4rem",
+    fontSize: "2rem",
+    a: {
+      margin: "0 0.75rem",
     },
   }
 })
@@ -82,6 +93,17 @@ const ContactMe = ({ innerRef, visible }) => {
           </SendEmailButton>
         </Container>
       </GetInTouchDetails>
+      <SocialMediaIconsContainer>
+        <a href="https://github.com/CreativelyLogical" target="_blank">
+          <FaGithub color="white" />
+        </a>
+        <a href="https://www.linkedin.com/in/umutjanmahmut/" target="_blank">
+          <FaLinkedin color="#fff" />
+        </a>
+        <a href="https://www.instagram.com/umutjan2010/" target="_blank">
+          <FaInstagram color="white" />
+        </a>
+      </SocialMediaIconsContainer>
     </Container>
   )
 }

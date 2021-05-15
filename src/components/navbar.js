@@ -21,6 +21,7 @@ const Nav = styled.nav`
   position: fixed;
   background: #0f2640;
   font-weight: 500;
+  box-shadow: 0px 10px 15px -2px #081524;
   @media (max-width: ${sizes.small}) {
     box-shadow: 0px 10px 15px 2px #081524;
   }
@@ -39,7 +40,7 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Name>Umutjan</Name>
+      <Name>Umutjan Mahmut</Name>
       <RightNavbar open={open} setOpen={setOpen} />
       <BurgerMenu open={open} setOpen={setOpen} />
     </Nav>

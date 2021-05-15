@@ -9,6 +9,9 @@ import transitionIn from "../animations/transition_in"
 import Raleway from "../fonts/Raleway-VariableFont_wght.ttf"
 import sizes from "../layout/sizes"
 import SectionHeader from "./shared/section_header"
+import { Link } from "gatsby"
+import { FaGithub } from "react-icons/fa"
+import styled from "@emotion/styled/"
 
 const hopeTodoProject = {
   id: 1,
@@ -31,6 +34,8 @@ const hopeTodoProject = {
     "Xcode",
     "Adobe Illustrator",
   ],
+  githubLink: "https://github.com/CreativelyLogical/todolist-app",
+  appLink: "https://apps.apple.com/us/app/id1531065845",
 }
 
 const battlesnakeProject = {
@@ -51,7 +56,31 @@ const battlesnakeProject = {
     </div>
   ),
   techUsed: ["JavaScript", "Node.js", "Express.js", "VS Code"],
+  githubLink: "https://github.com/CreativelyLogical/Battlesnake",
+  appLink: "https://play.battlesnake.com/u/creativelylogical/",
 }
+
+const SeeMoreProjectsButton = styled.a(() => {
+  return {
+    margin: "2rem 0 3rem",
+    color: "#28B6DE",
+    border: "2px solid #28B6DE",
+    borderRadius: 15,
+    background: "transparent",
+    fontFamily: "Raleway",
+    padding: "1rem 3rem",
+    fontSize: "calc(0vw + 1vh + 1vmin)",
+    fontWeight: 400,
+    transition: "0.2s",
+    cursor: "pointer",
+    ":hover": {
+      background: "#28B6DE",
+      color: "#0F2640",
+    },
+    textDecoration: "none",
+  }
+})
+
 export const Projects = ({ innerRef, visible }) => {
   const [animationStyle, setAnimationStyle] = useState(css`
     opacity: 0;
@@ -87,6 +116,8 @@ export const Projects = ({ innerRef, visible }) => {
         logo={Hope}
         technologies={hopeTodoProject["techUsed"]}
         id={hopeTodoProject["id"]}
+        githubLink={hopeTodoProject["githubLink"]}
+        appLink={hopeTodoProject["appLink"]}
       />
       <Project
         title="Battlesnake"
@@ -94,7 +125,15 @@ export const Projects = ({ innerRef, visible }) => {
         logo={Battlesnake}
         technologies={battlesnakeProject["techUsed"]}
         id={battlesnakeProject["id"]}
+        githubLink={battlesnakeProject["githubLink"]}
+        appLink={battlesnakeProject["appLink"]}
       />
+      <SeeMoreProjectsButton
+        href="https://github.com/CreativelyLogical"
+        target="_blank"
+      >
+        See More Projects
+      </SeeMoreProjectsButton>
     </Container>
   )
 }

@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
+import { FaGithub, FaExternalLinkAlt, FaGit } from "react-icons/fa"
+import { Link } from "gatsby"
 
 const ProjectContainer = styled.div({
   display: "flex",
@@ -43,6 +45,7 @@ const ProjectTechContainer = styled.div({
   flexWrap: "wrap",
   flexDirection: "row",
   marginTop: "1.2rem",
+  flexShrink: 0,
   div: {
     transition: "0.3s",
     ":hover": {
@@ -64,10 +67,40 @@ const ProjectDescription = styled.div({
   lineHeight: 1.5,
 })
 
-const Links = styled.div({
+const ProjectsAndLinksContainer = styled.div({
   display: "flex",
   flexDirection: "row",
+  alignContent: "space-between",
+  width: "100%",
+  "@media (max-width: 768px)": {
+    flexDirection: "column",
+  },
+  a: {
+    color: "white",
+  },
+})
+
+const Links = styled.div({
+  display: "flex",
   maxHeight: 150,
+  color: "white",
+  textAlign: "right",
+  flexShrink: 1,
+  marginTop: "1.2rem",
+  width: "100%",
+  justifyContent: "flex-end",
+  "*": {
+    fontSize: "1.5rem",
+    marginLeft: "0.5rem",
+  },
+  "@media (max-width: 768px)": {
+    justifyContent: "flex-start",
+    "*": {
+      fontSize: "1.5rem",
+      marginLeft: "0",
+      marginRight: "1rem",
+    },
+  },
 })
 
 const ProjectTech = props => {
@@ -94,29 +127,43 @@ const renderTechUsed = technologies => {
   return technologies.map(tech => <ProjectTech techUsed={tech} />)
 }
 
-export const Project = props => (
-  <ProjectContainer>
-    <ProjectInnerContainer>
-      <img
-        src={props.logo}
-        css={css({
-          marginBottom: 0,
-          width: "calc(4vw + 5vh + 2vmin)",
-          height: "calc(4vw + 5vh + 2vmin)",
-          "@media (max-width: 768px)": {
-            margin: "0 auto",
-            marginBottom: "1rem",
-          },
-        })}
-      />
-      <ProjectTitleDescription>
-        <ProjectTitle>{props.title}</ProjectTitle>
-        <ProjectDescription>{props.description}</ProjectDescription>
-      </ProjectTitleDescription>
-    </ProjectInnerContainer>
-    <ProjectTechContainer>
-      {renderTechUsed(props.technologies)}
-    </ProjectTechContainer>
-    <Links></Links>
-  </ProjectContainer>
-)
+export const Project = props => {
+  console.log("props is", props)
+
+  return (
+    <ProjectContainer>
+      <ProjectInnerContainer>
+        <img
+          src={props.logo}
+          css={css({
+            marginBottom: 0,
+            width: "calc(4vw + 5vh + 2vmin)",
+            height: "calc(4vw + 5vh + 2vmin)",
+            "@media (max-width: 768px)": {
+              margin: "0 auto",
+              marginBottom: "1rem",
+            },
+          })}
+        />
+        <ProjectTitleDescription>
+          <ProjectTitle>{props.title}</ProjectTitle>
+          <ProjectDescription>{props.description}</ProjectDescription>
+        </ProjectTitleDescription>
+      </ProjectInnerContainer>
+      <ProjectsAndLinksContainer>
+        <ProjectTechContainer>
+          {renderTechUsed(props.technologies)}
+        </ProjectTechContainer>
+
+        <Links>
+          <a href={props.githubLink} target="_blank">
+            <FaGithub />
+          </a>
+          <a href={props.appLink} target="_blank">
+            <FaExternalLinkAlt />
+          </a>
+        </Links>
+      </ProjectsAndLinksContainer>
+    </ProjectContainer>
+  )
+}
