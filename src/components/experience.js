@@ -6,11 +6,32 @@ import transitionIn from "../animations/transition_in"
 import sizes from "../layout/sizes"
 import SectionHeader from "./shared/section_header"
 
+const fullscript = {
+  title: "Intern Ruby Developer",
+  details: {
+    companyName: "Fullscript",
+    duration: "Aug 2021 - Present",
+    type: "Internship",
+  },
+  description: `Working mainly with Ruby on Rails with the team responsible for the patient
+  adherence program. Also responsible for maintaining the app by fixing bugs and improving 
+  performance`,
+  techUsed: [
+    "Ruby",
+    "Ruby on Rails",
+    "TypeScript",
+    "GraphQL",
+    "PostgreSQL",
+    "mySQL",
+  ],
+  companyWebsite: "https://fullscript.com/",
+}
+
 const leanpub = {
   title: "Full Stack Developer Co-op",
   details: {
     companyName: "Ruboss",
-    duration: "Jan 2021 - Present",
+    duration: "Jan 2021 - Aug 2021",
     type: "Internship",
   },
   description: `Working mainly on the styling Leanpub storefront pages and incorporating GraphQL into the API. 
@@ -25,6 +46,8 @@ const leanpub = {
     "Emotion",
     "GraphQL",
     "Yarn",
+    "Ruby",
+    "Ruby on Rails",
   ],
   companyWebsite: "http://ruboss.com/",
 }
@@ -79,6 +102,13 @@ export const Experience = ({ innerRef, visible }) => {
       id="experience"
     >
       <SectionHeader>Industry Experience</SectionHeader>
+      <Job
+        title={fullscript["title"]}
+        details={fullscript["details"]}
+        techUsed={fullscript["techUsed"]}
+        description={fullscript["description"]}
+        companyWebsite={fullscript["companyWebsite"]}
+      />
       <Job
         title={leanpub["title"]}
         details={leanpub["details"]}

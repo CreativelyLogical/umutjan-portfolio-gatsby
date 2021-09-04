@@ -80,9 +80,9 @@ const ContactMe = ({ innerRef, visible }) => {
       <GetInTouchDetails>
         <Container size="small">
           <p>
-            I'm currently looking for software development internships for Fall
-            2021. Think I might be a good fit on your team or just wanna chat?
-            Feel free to send me an Email.
+            I'm currently looking for software development internships for
+            Spring 2022. Think I might be a good fit on your team or just wanna
+            chat? Feel free to send me an Email.
           </p>
           <SendEmailButton
             onClick={() => {

@@ -170,18 +170,14 @@ export const About = ({ innerRef, visible }) => {
               of software development.
               <br />
               <br />
-              Currently, I am a Full Stack Developer intern at{" "}
-              <a className="ruboss" href="http://ruboss.com/">
-                Ruboss
+              Currently, I am a Ruby Developer intern at{" "}
+              <a className="ruboss" href="https://fullscript.com/">
+                Fullscript
               </a>
-              , which owns and operates{" "}
-              <a className="leanpub" href="https://leanpub.com/">
-                Leanpub
-              </a>
-              , a online platform where authors can write and publish e-books
-              and courses. As a full stack coop, I get to solve a variety of
-              interesting problems on a daily basis which constantly challenges
-              me to improve my skills as a developer.
+              , a free online supplement dispensary & patient adherence tool. As
+              an intern ruby developer, I get to solve a variety of interesting
+              problems on a daily basis which constantly challenges me to
+              improve my skills as a developer.
               <br />
               <br />
               Some technologies that I've recently been working with are:
@@ -198,32 +194,9 @@ export const About = ({ innerRef, visible }) => {
                 <Tech icon="graphql" />
                 <Tech icon="nodejs" />
               </TechnologiesWrapper>
-              {/* <br />
-            <br />
-            My interests include, but are not limited to:
-            <br />
-            mobile app development, web development, API development.
-            <br />
-            <br />
-            Some technologies I've been currently working with are:
-            <br />
-            <br />
-            <ul>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>Nest.js</li>
-            </ul>
-            <ul>
-              <li>GraphQL (Apollo)</li>
-              <li>Node.js</li>
-              <li>React</li>
-            </ul> */}
             </div>
           </AboutMeDetails>
         </Container>
-
-        {/* <button className="resume-btn">Resume</button> */}
-        {/* <Button variant="outline-light" className="resume-btn">Resume</Button>{' '} */}
       </StyledAbout>
     </Container>
   )
