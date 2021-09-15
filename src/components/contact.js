@@ -86,7 +86,7 @@ const ContactMe = ({ innerRef, visible }) => {
           </p>
           <SendEmailButton
             onClick={() => {
-              window.location.href = "mailto:umutjan2010@hotmail.com"
+              window.location.href = "mailto:umutjan2010@gmail.com"
             }}
           >
             Send Email
