@@ -35,7 +35,7 @@ const hopeTodoProject = {
     "Adobe Illustrator",
   ],
   githubLink: "https://github.com/CreativelyLogical/todolist-app",
-  appLink: "https://apps.apple.com/us/app/id1531065845",
+  appLink: "https://play.google.com/store/apps/details?id=com.umutjanmahmut.hope_todo",
 }
 
 const battlesnakeProject = {
