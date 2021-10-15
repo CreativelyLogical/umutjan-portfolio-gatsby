@@ -30,7 +30,6 @@ const AboutMeDetails = styled.div`
   font-weight: 500;
   float: left;
   text-align: left;
-  ${"" /* margin-right: 3rem; */}
   line-height: 1.6;
   color: #e6e6e6;
   align-items: start;
@@ -41,7 +40,7 @@ const AboutMeDetails = styled.div`
     text-decoration: none;
   }
 
-  .ruboss {
+  .company {
     text-decoration: none;
     font-weight: 600;
     color: #69ebff;
@@ -149,16 +148,6 @@ export const About = ({ innerRef, visible }) => {
             <div>
               Hi, I'm Umutjan. I'm a computer science student & aspiring
               software developer based in Victoria, BC, Canada.
-              {/* <br />
-            <br />
-            <span
-              css={css`
-                font-weight: 600;
-              `}
-            >
-              I am ambitious, focused, and self-motivated
-            </span>
-            . */}
               <br />
               <br />I am a lifelong learner with a burning passion for solving
               problems through the use of technology. I am passionate about all
@@ -170,14 +159,31 @@ export const About = ({ innerRef, visible }) => {
               of software development.
               <br />
               <br />
-              Currently, I am a Ruby Developer intern at{" "}
-              <a className="ruboss" href="https://fullscript.com/">
+              Currently, I am a <strong>Ruby Developer intern</strong> at{" "}
+              <a
+                className="company"
+                target="_blank"
+                href="https://fullscript.com/"
+              >
                 Fullscript
               </a>
               , a free online supplement dispensary & patient adherence tool. As
               an intern ruby developer, I get to solve a variety of interesting
               problems on a daily basis which constantly challenges me to
-              improve my skills as a developer.
+              improve my skills as a developer. I am also an{" "}
+              <strong>incoming software development engineer intern</strong> at{" "}
+              <a
+                className="company"
+                target="_blank"
+                href="https://www.amazon.com/"
+              >
+                Amazon
+              </a>{" "}
+              in the{" "}
+              <span className="interest">
+                <strong>summer of 2022</strong>
+              </span>
+              .
               <br />
               <br />
               Some technologies that I've recently been working with are:
