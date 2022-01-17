@@ -12,6 +12,7 @@ import {
   SiHtml5,
   SiGraphql,
   SiNodeDotJs,
+  SiRedux,
 } from "react-icons/si"
 import { DiRuby } from "react-icons/di"
 import transitionIn from "../animations/transition_in"
@@ -110,6 +111,9 @@ const Tech = props => {
     case "nodejs":
       icon = <SiNodeDotJs color="#539E43" />
       break
+    case "redux":
+      icon = <SiRedux color="#7046B3" />
+      break
     default:
       break
   }
@@ -191,6 +195,7 @@ export const About = ({ innerRef, visible }) => {
               <br />
               <TechnologiesWrapper>
                 <Tech icon="react" />
+                <Tech icon="redux" />
                 <Tech icon="js" />
                 <Tech icon="ts" />
                 <Tech icon="ruby" />
