@@ -159,18 +159,19 @@ export const About = ({ innerRef, visible }) => {
               of software development.
               <br />
               <br />
-              Currently, I am a <strong>Ruby Developer intern</strong> at{" "}
+              Currently, I am a <strong>Mobile Developer intern</strong> at{" "}
               <a
                 className="company"
                 target="_blank"
-                href="https://fullscript.com/"
+                href="https://borrowell.com/"
               >
-                Fullscript
+                Borrowell
               </a>
-              , a free online supplement dispensary & patient adherence tool. As
-              an intern ruby developer, I get to solve a variety of interesting
-              problems on a daily basis which constantly challenges me to
-              improve my skills as a developer. I am also an{" "}
+              , an online platform that helps people get personal loans in
+              Canada based on their credit reports. As a Mobile Developer
+              intern, I get to solve a variety of interesting problems on a
+              daily basis which constantly challenges me to improve my skills as
+              a developer. I am also an{" "}
               <strong>incoming software development engineer intern</strong> at{" "}
               <a
                 className="company"

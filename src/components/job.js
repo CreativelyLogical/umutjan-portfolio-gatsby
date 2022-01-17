@@ -112,18 +112,20 @@ const renderTechUsed = technologies => {
   return technologies.map(tech => <JobTech techUsed={tech} />)
 }
 
-export const Job = props => {
+export const Job = ({ job }) => {
+  const { title, details, description, techUsed, companyWebsite } = job
+  const { companyName, duration, type } = details
   return (
     <JobContainer>
-      <JobTitle>{props.title}</JobTitle>
+      <JobTitle>{title}</JobTitle>
       <JobDetails>
-        <a href={props.companyWebsite}>
-          <CompanyName>{props.details.companyName}</CompanyName>
+        <a href={companyWebsite}>
+          <CompanyName>{companyName}</CompanyName>
         </a>
-        <Duration>{props.details.duration}</Duration>
+        <Duration>{duration}</Duration>
       </JobDetails>
-      <JobDescription>{props.description}</JobDescription>
-      <JobTechContainer>{renderTechUsed(props.techUsed)}</JobTechContainer>
+      <JobDescription>{description}</JobDescription>
+      <JobTechContainer>{renderTechUsed(techUsed)}</JobTechContainer>
     </JobContainer>
   )
 }

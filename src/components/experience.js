@@ -6,11 +6,30 @@ import transitionIn from "../animations/transition_in"
 import sizes from "../layout/sizes"
 import SectionHeader from "./shared/section_header"
 
+const borrowell = {
+  title: "Mobile Developer Intern",
+  details: {
+    companyName: "Borrowell",
+    duration: "Jan 2021 - Present",
+    type: "Internship",
+  },
+  description: "Working with the mobile application team",
+  techUsed: [
+    "TypeScript",
+    "React Native",
+    "Redux",
+    "RxJS",
+    "Redux-observable",
+    "GraphQL",
+  ],
+  companyWebsite: "https://borrowell.com/",
+}
+
 const fullscript = {
   title: "Intern Ruby Developer",
   details: {
     companyName: "Fullscript",
-    duration: "Aug 2021 - Present",
+    duration: "Aug 2021 - Dec 2021",
     type: "Internship",
   },
   description: `Working mainly with Ruby on Rails with the team responsible for the patient
@@ -102,27 +121,10 @@ export const Experience = ({ innerRef, visible }) => {
       id="experience"
     >
       <SectionHeader>Industry Experience</SectionHeader>
-      <Job
-        title={fullscript["title"]}
-        details={fullscript["details"]}
-        techUsed={fullscript["techUsed"]}
-        description={fullscript["description"]}
-        companyWebsite={fullscript["companyWebsite"]}
-      />
-      <Job
-        title={leanpub["title"]}
-        details={leanpub["details"]}
-        techUsed={leanpub["techUsed"]}
-        description={leanpub["description"]}
-        companyWebsite={leanpub["companyWebsite"]}
-      />
-      <Job
-        title={okhelp["title"]}
-        details={okhelp["details"]}
-        techUsed={okhelp["techUsed"]}
-        description={okhelp["description"]}
-        companyWebsite={okhelp["companyWebsite"]}
-      />
+      <Job job={borrowell} />
+      <Job job={fullscript} />
+      <Job job={leanpub} />
+      <Job job={okhelp} />
     </Container>
   )
 }
