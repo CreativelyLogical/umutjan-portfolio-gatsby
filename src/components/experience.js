@@ -10,7 +10,7 @@ const borrowell = {
   title: "Mobile Developer Intern",
   details: {
     companyName: "Borrowell",
-    duration: "Jan 2021 - Present",
+    duration: "Jan 2022 - April 2022",
     type: "Internship",
   },
   description: "Working with the mobile application team",
